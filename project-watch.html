@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wedding-day</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <p>Czekamy na Was!</p>
+        <h1>Ten <span> dzień </span>już blisko!</h1>
+        <div class="launch-time">
+          <div>
+            <p id="days">00</p>
+            <span>Dni</span>
+          </div>
+          <div>
+            <p id="hours">00</p>
+            <span>Godziny</span>
+          </div>
+          <div>
+            <p id="minutes">00</p>
+            <span>Minuty</span>
+          </div>
+          <div>
+            <p id="seconds">00</p>
+            <span>Sekundy</span>
+          </div>
+        </div>
+      </div>
+      <img src="images/airplane-1.png" class="plane" />
+    </div>
+    <script>
+      var countDownDate = new Date("Sep 06, 2023 17:00:00").getTime();
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        if (days < 10) {
+          days = "0" + days;
+        }
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60 * 60)
+        );
+        if (hours < 10) {
+          hours = "0" + hours;
+        }
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        if (distance < 10) {
+          clearInterval(x);
+          document.getElementById("days").innerHTML = "00";
+          document.getElementById("hours").innerHTML = "00";
+          document.getElementById("minutes").innerHTML = "00";
+          document.getElementById("seconds").innerHTML = "00";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

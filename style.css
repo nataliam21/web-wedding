@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  background-image: url(images/foto.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 0;
+}
+
+.content {
+  top: 30%;
+  position: absolute;
+  transform: translateY(-40%);
+  color: white;
+}
+
+.content p {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+}
+.content h1 {
+  font-size: 34px;
+  font-weight: 600;
+}
+.content h1 span {
+  color: #942e14;
+  font-size: 30px;
+}
+.launch-time {
+  display: flex;
+}
+.launch-time div {
+  flex-basis: 100px;
+}
+.launch-time div p {
+  font-size: 40px;
+  margin-bottom: -14px;
+}
+
+.plane {
+  top: 12%;
+  width: 100px;
+  position: absolute;
+  left: 10%;
+  animation: plane 3s linear infinite;
+}
+
+@keyframes plane {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  50% {
+    right: 50%;
+    opacity: 1;
+  }
+  100% {
+    right: 105%;
+    opacity: 1;
+  }
+}
