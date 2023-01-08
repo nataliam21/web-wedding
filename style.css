@@ -54,7 +54,7 @@
   top: 12%;
   width: 100px;
   position: absolute;
-  left: 25%;
+  left: 100%;
   animation: plane 3s linear infinite;
   margin: 20px;
 }
