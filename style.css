@@ -19,6 +19,7 @@
   position: absolute;
   transform: translateY(-40%);
   color: white;
+  margin: 20px;
 }
 
 .content p {
@@ -43,14 +44,19 @@
 .launch-time div p {
   font-size: 40px;
   margin-bottom: -14px;
+  padding-right: 30px;
+}
+.days {
+  padding-left: 25px;
 }
 
 .plane {
   top: 12%;
   width: 100px;
   position: absolute;
-  left: 10%;
+  left: 25%;
   animation: plane 3s linear infinite;
+  margin: 20px;
 }
 
 @keyframes plane {
