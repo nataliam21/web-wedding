@@ -39,6 +39,7 @@
 }
 .launch-time {
   display: flex;
+  padding-left: 40px;
 }
 .launch-time div {
   flex-basis: 100px;
