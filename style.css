@@ -17,7 +17,7 @@
 .content {
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -56,8 +56,8 @@
   top: 12%;
   width: 100px;
   position: absolute;
-  left: 85%;
-  right: 30%;
+  left: 80%;
+  right: 25%;
   animation: plane 3s linear infinite;
   margin: 20px;
 }
